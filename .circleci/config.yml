@@ -1,13 +1,13 @@
-version:2.1 # CircleCIの最新Versionを指定します
+version: 2.1
 
 jobs:
-  test-job:         #任意のJob名を記載します。
-    docker:         # 実行環境を指定します。今回はDocker Imageを使用します
-      - image: cimg/ubuntu-2004    # Imageは、CircleCIが用意するUbuntuを使用
-    steps:       # 実行するコマンドを記載します
-      - run: echo "Hello World"         # ここではecho コマンドを使ってHello World を表示させます
+  test-job:
+    docker:
+      - image: cimg/ubuntu-2004
+    steps:
+      - run: echo "Hello World"
 
-workflows:  # Workflowの宣言をします
-  test-workflow:  # Workflowの名前を記載します
-    jobs:  # 実行するJob名を記載します
-      - test-job  # Job作成時に指定したJob名を記載します
+workflows:
+  test-workflow:
+    jobs:
+      - test-job
