@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test-job:
     docker:
-      - image: cimg/ubuntu-2004
+            - image: cimg/base:2022.02
     steps:
       - run: echo "Hello World"
 
